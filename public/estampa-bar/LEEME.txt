@@ -1,0 +1,2 @@
+Fotos del Estampa Bar (cuadradas o verticales, 1200 px). Luego escribe su ruta en data/content.ts → estampaBarGallery → src.
+Ejemplo: src: "/estampa-bar/cumple-martina.jpg"

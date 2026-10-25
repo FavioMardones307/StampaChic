@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+  <!-- LOGO PROVISORIO: reemplazar por /public/brand/logo.png (ver README) -->
+  <circle cx="100" cy="100" r="98" fill="#17131c"/>
+  <g style="mix-blend-mode:screen">
+    <path d="M58 70 Q70 38 96 52 Q118 30 132 58 Q160 56 150 86 Q170 106 142 118 Q146 146 116 136 Q100 160 82 136 Q52 146 56 118 Q30 100 58 70Z" fill="#d6136f"/>
+    <path d="M104 64 Q124 50 136 70 Q156 76 144 96 Q150 118 126 112 Q110 126 102 106 Q84 96 104 64Z" fill="#2bb3d6" opacity=".9"/>
+    <path d="M70 92 Q80 80 92 92 Q104 98 94 112 Q84 124 72 112 Q60 102 70 92Z" fill="#ffc21a"/>
+    <circle cx="150" cy="56" r="7" fill="#1f9d5b"/><circle cx="46" cy="132" r="6" fill="#f2651c"/>
+    <circle cx="160" cy="132" r="4" fill="#ffc21a"/><circle cx="52" cy="62" r="4" fill="#2bb3d6"/>
+  </g>
+  <text x="100" y="168" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-style="italic" font-weight="700" font-size="30" fill="#d4ad62">StampaChic</text>
+</svg>

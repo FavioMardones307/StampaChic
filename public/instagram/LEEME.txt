@@ -1,0 +1,2 @@
+Fotos para el bloque de Instagram (cuadradas, 1080×1080). Luego escribe su ruta en data/content.ts → instagramPosts → src.
+Ejemplo: src: "/instagram/post-1.jpg"

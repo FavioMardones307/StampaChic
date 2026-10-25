@@ -1,0 +1,7 @@
+Aquí van las FOTOS REALES de tus productos.
+
+1. Crea una carpeta con el "slug" del producto (lo encuentras en data/products.ts).
+   Ejemplo: public/productos/pack-dia-del-tens/
+2. Pon dentro tus fotos: 1.jpg, 2.jpg, 3.jpg (cuadradas, 1200×1200 px, idealmente menos de 400 KB).
+3. En data/products.ts, en ese producto, escribe:
+   images: ["/productos/pack-dia-del-tens/1.jpg", "/productos/pack-dia-del-tens/2.jpg"],
