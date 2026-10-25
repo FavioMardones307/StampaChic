@@ -22,7 +22,7 @@
   --color-amarillo: #ffc21a;
   --color-verde: #1f9d5b;
   --color-naranja: #f2651c;
-  --color-oro: #b8893e;
+  --color-oro: #c6ae6f; /* dorado del logo */
 
   /* Tipografías (se cargan en app/layout.tsx) */
   --font-display: var(--font-display-face), "Helvetica Neue", Arial, sans-serif;

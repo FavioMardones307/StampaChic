@@ -79,10 +79,9 @@ Las medidas están en `data/size-guide.ts`. Ajústalas con las de tu proveedor.
 ## 3. Fotos reales y logo
 
 ### Tu logo
-1. Guarda tu logo como **`logo.png`** (cuadrado, mínimo 512×512 px, idealmente con fondo transparente).
-2. Súbelo a la carpeta **`public/brand/`**.
-3. En `config/site.ts`, cambia `logo: "/brand/logo.svg"` por `logo: "/brand/logo.png"`.
-4. (Opcional) Para el ícono de la pestaña del navegador, reemplaza `app/icon.svg` por un archivo `app/icon.png` con tu logo.
+El logo está en **`public/brand/logo.png`** (recortado en círculo, con fondo transparente).
+Para cambiarlo, sube un archivo nuevo con **el mismo nombre** (`logo.png`, cuadrado, mínimo 512×512 px) y reemplaza el anterior.
+El ícono de la pestaña del navegador está en `app/icon.png` y el de iPhone en `app/apple-icon.png`: reemplázalos igual si cambias el logo.
 
 ### Fotos de productos
 1. En `public/productos/` crea una carpeta con el **slug** del producto, por ejemplo `public/productos/pack-dia-del-tens/`.

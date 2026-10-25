@@ -34,10 +34,10 @@ export const site = {
     : "https://stampachic.cl",
 
   /**
-   * Logo. Cuando subas tu logo real a /public/brand/logo.png,
-   * cambia esta línea a: "/brand/logo.png"
+   * Logo (imagen redonda, idealmente PNG con fondo transparente).
+   * Para cambiarlo, reemplaza el archivo /public/brand/logo.png por uno con el mismo nombre.
    */
-  logo: "/brand/logo.svg",
+  logo: "/brand/logo.png",
 
   /** Ubicación del taller */
   location: {

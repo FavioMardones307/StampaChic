@@ -8,10 +8,12 @@ export const ogSize = { width: 1200, height: 630 };
 
 /** Imagen para compartir en WhatsApp / Instagram / redes. */
 export async function renderOg({ title, subtitle, badge }: { title: string; subtitle: string; badge?: string }) {
-  const [syne, dm] = await Promise.all([
+  const [syne, dm, logo] = await Promise.all([
     readFile(join(process.cwd(), "assets/BricolageGrotesque-Bold.ttf")),
     readFile(join(process.cwd(), "assets/DMSans-Medium.ttf")),
+    readFile(join(process.cwd(), "assets/logo-og.png")),
   ]);
+  const logoSrc = `data:image/png;base64,${logo.toString("base64")}`;
   const blobs = [
     { seed: 3, color: "#d6136f", x: 760, y: 40, s: 2.6 },
     { seed: 8, color: "#2bb3d6", x: 900, y: 250, s: 1.8 },
@@ -30,9 +32,8 @@ export async function renderOg({ title, subtitle, badge }: { title: string; subt
         ))}
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "64px 72px", width: "100%" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div style={{ fontFamily: "Bricolage", fontSize: 40, color: "white", display: "flex" }}>
-              Stampa<span style={{ color: "#ff4f9e" }}>Chic</span>
-            </div>
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src={logoSrc} width={120} height={120} alt="" />
             {badge && (
               <div style={{ background: "#ffc21a", color: "#17131c", fontSize: 26, padding: "6px 18px", borderRadius: 999, marginLeft: 12 }}>{badge}</div>
             )}

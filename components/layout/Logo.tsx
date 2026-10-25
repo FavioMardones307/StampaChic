@@ -15,7 +15,7 @@ export function Logo({ inverse = false, size = 44 }: { inverse?: boolean; size?:
         priority
       />
       <span className={`font-display text-[1.15rem] sm:text-[1.35rem] font-bold tracking-tight ${inverse ? "text-white" : "text-tinta"}`}>
-        Stampa<span className={inverse ? "text-[#ff5aa5]" : "text-magenta"}>Chic</span>
+        StampaChic
       </span>
     </Link>
   );
