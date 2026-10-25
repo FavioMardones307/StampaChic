@@ -24,10 +24,14 @@ export const site = {
     "Poleras, polerones, tazones, tote bags y regalos personalizados hechos a mano en Machalí. Packs temáticos, Estampa Bar para eventos y envíos a todo Chile.",
 
   /**
-   * Dirección web final del sitio (sin "/" al final).
-   * Cámbiala cuando conectes tu dominio, por ejemplo "https://stampachic.cl".
+   * Dirección web del sitio (sin "/" al final). Se usa en Google y al compartir links.
+   * En Vercel se detecta sola: hoy es stampachic.vercel.app y, cuando conectes
+   * stampachic.cl, pasa a ser ese dominio sin que tengas que cambiar nada.
+   * "https://stampachic.cl" solo se usa fuera de Vercel.
    */
-  url: "https://stampachic.cl",
+  url: process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "https://stampachic.cl",
 
   /**
    * Logo. Cuando subas tu logo real a /public/brand/logo.png,

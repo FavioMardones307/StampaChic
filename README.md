@@ -192,7 +192,7 @@ Desde entonces, **cada cambio que guardes en GitHub se publica automáticamente*
      `ns1.vercel-dns.com` y `ns2.vercel-dns.com`
    - Si usas correo con tu dominio (contacto@stampachic.cl), **antes** de cambiar los DNS pide ayuda para traspasar los registros MX del correo; o bien, en vez de cambiar los servidores, agrega en tu proveedor DNS los registros que indica Vercel (un registro **A** `76.76.21.21` para `stampachic.cl` y un **CNAME** `cname.vercel-dns.com` para `www`).
 4. Espera entre 1 y 24 horas. Vercel activa el candado de seguridad (HTTPS) automáticamente.
-5. En `config/site.ts` confirma que `url: "https://stampachic.cl"` coincide con tu dominio (es la dirección que usan Google y los links compartidos).
+5. No necesitas cambiar nada más: el sitio detecta solo su dirección principal en Vercel. Para que Google y los links compartidos usen `stampachic.cl`, en **Settings → Domains** déjalo marcado como dominio principal y vuelve a desplegar (**Deployments → ⋯ → Redeploy**).
 
 ### Después de publicar
 - Registra tu sitio en [Google Search Console](https://search.google.com/search-console) y envía `https://stampachic.cl/sitemap.xml`.
