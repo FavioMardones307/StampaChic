@@ -1,5 +1,4 @@
 import { Container, SectionHeading } from "@/components/ui/Section";
-import { Reveal } from "@/components/ui/Reveal";
 
 const STEPS = [
   { title: "Elige tu producto", text: "Polera, polerón, tazón, tote bag o un pack listo para regalar. Tú eliges la base, la talla y el color." },
@@ -9,19 +8,17 @@ const STEPS = [
 
 export function HowItWorks() {
   return (
-    <section className="border-y border-linea bg-white py-16 sm:py-24" aria-labelledby="como-funciona">
+    <section className="py-16 sm:py-24" aria-labelledby="como-funciona">
       <Container>
         <SectionHeading title={<span id="como-funciona">Así de fácil es tener el tuyo</span>} />
-        <ol className="mt-12 grid gap-10 md:grid-cols-3 md:gap-8">
+        <ol className="mt-10 grid gap-3 sm:gap-4 md:grid-cols-3">
           {STEPS.map((s, i) => (
-            <li key={s.title}>
-              <Reveal delay={i * 120}>
-                <span className="font-display block text-7xl font-bold text-tinta" aria-hidden>
-                  {i + 1}
-                </span>
-                <h3 className="font-display mt-4 text-2xl font-bold">{s.title}</h3>
-                <p className="mt-2 max-w-sm leading-relaxed text-tinta-suave">{s.text}</p>
-              </Reveal>
+            <li key={s.title} className="rounded-[1.5rem] bg-algodon p-6 sm:p-8">
+              <span className="font-display flex h-11 w-11 items-center justify-center rounded-full bg-magenta text-lg font-semibold text-white" aria-hidden>
+                {i + 1}
+              </span>
+              <h3 className="font-display mt-10 text-2xl font-semibold">{s.title}</h3>
+              <p className="mt-2 leading-relaxed text-tinta-suave">{s.text}</p>
             </li>
           ))}
         </ol>

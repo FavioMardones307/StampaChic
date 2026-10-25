@@ -15,7 +15,7 @@ export function ProductCarousel({ products, label }: { products: Product[]; labe
   };
   return (
     <div className="relative" role="region" aria-roledescription="carrusel" aria-label={label}>
-      <ul ref={ref} className="no-scrollbar -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-4 px-4 pb-2 sm:-mx-6 sm:scroll-px-6 sm:px-6 lg:mx-0 lg:px-0">
+      <ul ref={ref} className="no-scrollbar relative -mx-4 flex snap-x snap-mandatory gap-4 overflow-x-auto scroll-px-4 px-4 pb-2 sm:-mx-6 sm:scroll-px-6 sm:px-6 lg:mx-0 lg:px-0">
         {products.map((p) => (
           <li key={p.slug} className="w-[68%] shrink-0 snap-start sm:w-[40%] lg:w-[calc(25%-12px)]">
             <ProductCard product={p} />

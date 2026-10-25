@@ -11,7 +11,7 @@
   --color-tinta: #17131c; /* negro tinta (textos y fondos oscuros) */
   --color-tinta-suave: #4a4450; /* textos secundarios */
   --color-papel: #fcfafa; /* blanco algodón (fondo principal) */
-  --color-algodon: #f2eff3; /* superficies suaves */
+  --color-algodon: #f1f1f3; /* superficies suaves */
   --color-linea: #e3dee5; /* bordes */
 
   /* Acentos de tinta (úsalos con moderación) */
@@ -35,6 +35,12 @@
   --shadow-alta: 0 2px 4px rgb(23 19 28 / 0.06), 0 24px 48px -20px rgb(23 19 28 / 0.35);
 
   --animate-pop: pop 0.45s cubic-bezier(0.3, 1.6, 0.5, 1);
+  --animate-marquesina: marquesina 40s linear infinite;
+}
+
+@keyframes marquesina {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @keyframes pop {

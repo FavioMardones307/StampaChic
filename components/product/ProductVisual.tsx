@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { getCategory, type Product } from "@/data/products";
+import type { Product } from "@/data/products";
 import { Mockup, PackMockup } from "./Mockup";
 
 type Props = {
@@ -34,7 +34,7 @@ export function ProductVisual({ product, index = 0, color, text, image, sizes = 
       />
     );
   }
-  const tint = getCategory(product.categories[0])?.tint;
+  const tint = "#F1F1F3"; // fondo neutro, igual para todos los productos
   const seed = product.slug.length + index;
   if (product.packItems) {
     return <PackMockup items={product.packItems} background={tint} text={text} seed={seed} title={product.name} className={`h-full w-full ${className ?? ""}`} />;

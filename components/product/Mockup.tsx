@@ -1,5 +1,5 @@
 import type { MockupKind } from "@/data/products";
-import { splashPath } from "@/components/ui/Splash";
+import { splashDrops, splashPath } from "@/components/ui/Splash";
 
 /**
  * Dibujo de muestra de cada producto (se usa mientras no haya fotos reales).
@@ -116,12 +116,31 @@ export type MockupProps = {
   className?: string;
 };
 
-const ACCENTS = ["#d6136f", "#2bb3d6", "#ffc21a", "#1f9d5b", "#f2651c"];
+/** Colores de la salpicadura, tomados del logo */
+const RAINBOW = ["#8b3fd9", "#ffc21a", "#e8321f", "#2bb3d6", "#1f9d5b", "#d6136f", "#f2651c"];
+
+/** Estampado de muestra: explosión de pintura multicolor, como la del logo */
+function Splatter({ seed }: { seed: number }) {
+  const blobs = Array.from({ length: 5 }, (_, i) => {
+    const a = ((i * 72 + seed * 23) * Math.PI) / 180;
+    return { d: splashPath(seed * 3 + i, 100 + Math.cos(a) * 20, 100 + Math.sin(a) * 15, 20 + ((seed + i) % 3) * 4, 9), c: RAINBOW[(seed + i) % RAINBOW.length] };
+  });
+  return (
+    <g>
+      {blobs.map((b, i) => (
+        <path key={i} d={b.d} fill={b.c} opacity="0.95" />
+      ))}
+      {splashDrops(seed + 9, 100, 100, 34, 9).map((c, i) => (
+        <circle key={i} cx={c.cx.toFixed(1)} cy={c.cy.toFixed(1)} r={(c.r * 0.6).toFixed(1)} fill={RAINBOW[(seed + i * 2) % RAINBOW.length]} />
+      ))}
+    </g>
+  );
+}
 
 export function Mockup({
   kind,
   color = "#FFFFFF",
-  background = "#F2EFF3",
+  background = "#F1F1F3",
   text,
   image,
   seed = 3,
@@ -131,8 +150,6 @@ export function Mockup({
 }: MockupProps) {
   const p = PRINT[kind];
   const dark = isDark(color);
-  const accent = ACCENTS[seed % ACCENTS.length];
-  const accent2 = ACCENTS[(seed + 2) % ACCENTS.length];
   const s = p.w / 120; // escala del estampado
   const label = (text ?? "").slice(0, 22);
   const fontSize = Math.max(9, Math.min(22, (p.w * 1.6) / Math.max(label.length, 5)));
@@ -150,9 +167,8 @@ export function Mockup({
             <image href={image} x={-p.w / 2} y={-p.w / 2} width={p.w} height={p.w} preserveAspectRatio="xMidYMid slice" clipPath={`url(#${clipId})`} />
           </>
         ) : (
-          <g transform={`scale(${s}) translate(-100 -100)`} opacity={label ? 0.9 : 1}>
-            <path d={splashPath(seed, 100, 100, 46)} fill={accent} />
-            <path d={splashPath(seed + 5, 122, 86, 22, 9)} fill={accent2} style={{ mixBlendMode: dark ? "screen" : "multiply" }} />
+          <g transform={`scale(${s}) translate(-100 -100)`}>
+            <Splatter seed={seed} />
           </g>
         )}
         {label && (
@@ -164,7 +180,7 @@ export function Mockup({
             fontSize={fontSize}
             fill={image ? (dark ? "#fff" : "#17131c") : "#fff"}
             stroke={image ? "none" : "#17131c"}
-            strokeWidth={image ? 0 : fontSize / 7}
+            strokeWidth={image ? 0 : fontSize / 5}
             paintOrder="stroke"
           >
             {label}

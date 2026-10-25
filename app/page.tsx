@@ -2,6 +2,7 @@ import { bestSellers } from "@/data/products";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container, SectionHeading } from "@/components/ui/Section";
 import { Hero } from "@/components/home/Hero";
+import { Marquee } from "@/components/home/Marquee";
 import { Categories } from "@/components/home/Categories";
 import { ProductCarousel } from "@/components/home/BestSellers";
 import { HowItWorks } from "@/components/home/HowItWorks";
@@ -15,6 +16,7 @@ export default function Home() {
   return (
     <>
       <Hero />
+      <Marquee />
       <Categories />
       <section className="pb-16 sm:pb-24" aria-labelledby="mas-vendidos">
         <Container>
