@@ -58,7 +58,7 @@ export default function EstampaBar() {
         <Container className="relative grid items-center gap-10 py-14 sm:py-20 lg:grid-cols-2">
           <div>
             <p className="font-display text-lg font-bold text-amarillo">Estampa Bar</p>
-            <h1 className="font-display ink-inverse mt-2 text-[2.6rem] font-bold leading-[1] sm:text-6xl">
+            <h1 className="font-display mt-2 text-[2.6rem] font-bold leading-[1] sm:text-6xl">
               Cada invitado diseña su recuerdo, y se lo lleva puesto
             </h1>
             <p className="mt-5 max-w-xl text-lg leading-relaxed text-white/80">
@@ -135,7 +135,7 @@ export default function EstampaBar() {
       <section id="cotizar" className="scroll-mt-24 bg-tinta py-16 sm:py-20" aria-labelledby="cotizar-eb">
         <Container className="grid gap-10 lg:grid-cols-[1fr_1.4fr]">
           <div className="text-white">
-            <h2 id="cotizar-eb" className="font-display ink-inverse text-[2rem] font-bold sm:text-5xl">Cotiza tu evento</h2>
+            <h2 id="cotizar-eb" className="font-display text-[2rem] font-bold sm:text-5xl">Cotiza tu evento</h2>
             <p className="mt-4 text-lg leading-relaxed text-white/80">Cuéntanos la fecha y cuántos invitados vienen. Te enviamos la propuesta y el valor por WhatsApp.</p>
           </div>
           <div className="rounded-[var(--radius-card)] bg-papel p-5 sm:p-8">

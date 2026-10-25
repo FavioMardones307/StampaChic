@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { DM_Sans, Syne } from "next/font/google";
+import { Bricolage_Grotesque, DM_Sans } from "next/font/google";
 import { site } from "@/config/site";
 import { AnnouncementBar } from "@/components/layout/AnnouncementBar";
 import { Header } from "@/components/layout/Header";
@@ -9,7 +9,7 @@ import { CartDrawer } from "@/components/cart/CartDrawer";
 import { JsonLd, localBusinessLd } from "@/lib/seo";
 import "./globals.css";
 
-const syne = Syne({ subsets: ["latin"], weight: ["700"], variable: "--font-syne", display: "swap" });
+const display = Bricolage_Grotesque({ subsets: ["latin"], weight: ["600", "700"], variable: "--font-display-face", display: "swap" });
 const dmSans = DM_Sans({ subsets: ["latin"], variable: "--font-dm-sans", display: "swap" });
 
 export const metadata: Metadata = {
@@ -54,7 +54,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="es-CL" className={`${syne.variable} ${dmSans.variable}`}>
+    <html lang="es-CL" className={`${display.variable} ${dmSans.variable}`}>
       <body className="flex min-h-dvh flex-col">
         <a href="#contenido" className="sr-only z-[60] rounded-full bg-tinta px-4 py-2 text-white focus:not-sr-only focus:fixed focus:left-3 focus:top-3">
           Saltar al contenido

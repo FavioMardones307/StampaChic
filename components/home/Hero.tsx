@@ -15,10 +15,9 @@ const COLLAGE = [
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
-      <div className="halftone pointer-events-none absolute -left-10 top-0 h-64 w-64 text-tinta/[0.07] [mask-image:radial-gradient(circle,black,transparent_70%)]" aria-hidden />
       <div className="mx-auto grid max-w-7xl items-center gap-10 px-4 pb-14 pt-10 sm:px-6 lg:grid-cols-[minmax(0,1.1fr)_minmax(0,1fr)] lg:gap-6 lg:px-8 lg:pb-24 lg:pt-16">
         <div className="min-w-0">
-          <h1 className="font-display ink ink-animate text-[2.55rem] font-bold leading-[0.98] sm:text-6xl xl:text-[5.2rem]">
+          <h1 className="font-display text-[2.55rem] font-bold leading-[0.98] sm:text-6xl xl:text-[5.2rem]">
             Tu estilo, estampado en todo lo que usas
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-tinta-suave sm:text-xl">

@@ -30,7 +30,7 @@ export function Footer() {
         <div className="grid gap-12 lg:grid-cols-[1.3fr_2fr]">
           <div>
             <Logo inverse size={52} />
-            <p className="font-display ink-inverse mt-6 text-3xl font-bold">{site.slogan}</p>
+            <p className="font-display mt-6 text-3xl font-bold">{site.slogan}</p>
             <p className="mt-4 max-w-sm text-white/70">
               Estampamos a mano en {site.location.city} lo que te hace única: tu nombre, tu logo, tu historia.
             </p>

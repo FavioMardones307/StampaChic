@@ -9,7 +9,7 @@ export const ogSize = { width: 1200, height: 630 };
 /** Imagen para compartir en WhatsApp / Instagram / redes. */
 export async function renderOg({ title, subtitle, badge }: { title: string; subtitle: string; badge?: string }) {
   const [syne, dm] = await Promise.all([
-    readFile(join(process.cwd(), "assets/Syne-ExtraBold.ttf")),
+    readFile(join(process.cwd(), "assets/BricolageGrotesque-Bold.ttf")),
     readFile(join(process.cwd(), "assets/DMSans-Medium.ttf")),
   ]);
   const blobs = [
@@ -30,7 +30,7 @@ export async function renderOg({ title, subtitle, badge }: { title: string; subt
         ))}
         <div style={{ display: "flex", flexDirection: "column", justifyContent: "space-between", padding: "64px 72px", width: "100%" }}>
           <div style={{ display: "flex", alignItems: "center", gap: 16 }}>
-            <div style={{ fontFamily: "Syne", fontSize: 40, color: "white", display: "flex" }}>
+            <div style={{ fontFamily: "Bricolage", fontSize: 40, color: "white", display: "flex" }}>
               Stampa<span style={{ color: "#ff4f9e" }}>Chic</span>
             </div>
             {badge && (
@@ -40,12 +40,11 @@ export async function renderOg({ title, subtitle, badge }: { title: string; subt
           <div style={{ display: "flex", flexDirection: "column", maxWidth: 720 }}>
             <div
               style={{
-                fontFamily: "Syne",
+                fontFamily: "Bricolage",
                 fontSize: title.length > 26 ? 76 : 96,
                 lineHeight: 1,
                 color: "white",
                 letterSpacing: -2,
-                textShadow: "5px 4px 0 #d6136f, -4px -3px 0 #2bb3d6",
               }}
             >
               {title}
@@ -61,7 +60,7 @@ export async function renderOg({ title, subtitle, badge }: { title: string; subt
     {
       ...ogSize,
       fonts: [
-        { name: "Syne", data: syne, weight: 800, style: "normal" },
+        { name: "Bricolage", data: syne, weight: 700, style: "normal" },
         { name: "DM Sans", data: dm, weight: 500, style: "normal" },
       ],
     },

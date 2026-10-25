@@ -22,7 +22,7 @@ export function PacksBanner() {
       <Container className="relative">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           <div>
-            <h2 id="packs" className="font-display ink-inverse text-[2.5rem] font-bold sm:text-6xl">
+            <h2 id="packs" className="font-display text-[2.5rem] font-bold sm:text-6xl">
               Regalos que se recuerdan, en las fechas que importan
             </h2>
             <p className="mt-5 max-w-lg text-lg leading-relaxed text-white/80">

@@ -35,7 +35,7 @@ export function PageHero({ title, intro, children, tone = "light" }: { title: Re
   return (
     <section className={`relative overflow-hidden ${dark ? "bg-tinta text-white" : "bg-algodon"}`}>
       <Container className="relative py-14 sm:py-20">
-        <h1 className={`font-display max-w-3xl text-[2.6rem] font-bold sm:text-6xl ${dark ? "ink-inverse" : "ink"}`}>{title}</h1>
+        <h1 className={`font-display max-w-3xl text-[2.6rem] font-bold sm:text-6xl`}>{title}</h1>
         {intro && <p className={`mt-5 max-w-2xl text-lg leading-relaxed ${dark ? "text-white/80" : "text-tinta-suave"}`}>{intro}</p>}
         {children && <div className="mt-8">{children}</div>}
       </Container>

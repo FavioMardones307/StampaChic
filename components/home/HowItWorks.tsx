@@ -16,7 +16,7 @@ export function HowItWorks() {
           {STEPS.map((s, i) => (
             <li key={s.title}>
               <Reveal delay={i * 120}>
-                <span className="font-display ink block text-7xl font-bold text-tinta" aria-hidden>
+                <span className="font-display block text-7xl font-bold text-tinta" aria-hidden>
                   {i + 1}
                 </span>
                 <h3 className="font-display mt-4 text-2xl font-bold">{s.title}</h3>

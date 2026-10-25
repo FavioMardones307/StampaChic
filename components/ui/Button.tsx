@@ -5,9 +5,9 @@ type Variant = "primary" | "dark" | "outline" | "light" | "whatsapp";
 type Size = "md" | "lg";
 
 const VARIANTS: Record<Variant, string> = {
-  primary: "bg-magenta text-white hover:bg-magenta-oscuro shadow-[0_6px_0_-2px_var(--color-tinta)] hover:shadow-[0_3px_0_-1px_var(--color-tinta)] hover:translate-y-[2px]",
-  dark: "bg-tinta text-white hover:bg-black",
-  outline: "border-2 border-tinta text-tinta hover:bg-tinta hover:text-white",
+  primary: "bg-tinta text-white hover:bg-magenta",
+  dark: "bg-tinta text-white hover:bg-tinta-suave",
+  outline: "border border-tinta/25 bg-white text-tinta hover:border-tinta",
   light: "bg-white text-tinta hover:bg-algodon",
   whatsapp: "bg-[#128C4B] text-white hover:bg-[#0e7a40]",
 };
@@ -17,7 +17,7 @@ const SIZES: Record<Size, string> = {
 };
 
 export function buttonClass(variant: Variant = "primary", size: Size = "md", extra = "") {
-  return `inline-flex items-center justify-center gap-2 rounded-full font-bold transition-all duration-200 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:translate-y-0 ${VARIANTS[variant]} ${SIZES[size]} ${extra}`;
+  return `inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-200 disabled:cursor-not-allowed disabled:opacity-50 disabled:shadow-none disabled:translate-y-0 ${VARIANTS[variant]} ${SIZES[size]} ${extra}`;
 }
 
 type Common = { variant?: Variant; size?: Size; className?: string; children: ReactNode };

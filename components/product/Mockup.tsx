@@ -1,5 +1,5 @@
 import type { MockupKind } from "@/data/products";
-import { splashDrops, splashPath } from "@/components/ui/Splash";
+import { splashPath } from "@/components/ui/Splash";
 
 /**
  * Dibujo de muestra de cada producto (se usa mientras no haya fotos reales).
@@ -179,11 +179,6 @@ export function Mockup({
   return (
     <svg viewBox="0 0 400 400" className={className} role="img" aria-label={title ?? `Ilustración de ${kind}`}>
       <rect width="400" height="400" fill={background} />
-      <g fill="#17131c" opacity="0.05">
-        {splashDrops(seed, 200, 200, 120, 10).map((c, i) => (
-          <circle key={i} cx={c.cx.toFixed(1)} cy={c.cy.toFixed(1)} r={(c.r * 2.4).toFixed(1)} />
-        ))}
-      </g>
       <ellipse cx="200" cy="362" rx="130" ry="10" fill="#17131c" opacity="0.07" />
       {content}
     </svg>

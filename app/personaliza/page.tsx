@@ -80,7 +80,7 @@ export default function Personaliza() {
           <ol className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {STEPS.map((s, i) => (
               <li key={s.t}>
-                <span className="font-display ink-inverse text-6xl font-bold" aria-hidden>{i + 1}</span>
+                <span className="font-display text-6xl font-bold" aria-hidden>{i + 1}</span>
                 <h3 className="mt-3 text-xl font-bold">{s.t}</h3>
                 <p className="mt-1.5 text-white/75">{s.d}</p>
               </li>
