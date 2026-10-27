@@ -79,7 +79,7 @@ Las medidas están en `data/size-guide.ts`. Ajústalas con las de tu proveedor.
 ## 3. Fotos reales y logo
 
 ### Tu logo
-El logo está en **`public/brand/logo.png`** (recortado en círculo, con fondo transparente).
+El logo está en **`public/brand/logo.png`** (redondo, con fondo transparente). También hay una versión vectorial nítida en `public/brand/logo.svg`, útil para imprimir o para tus redes.
 Para cambiarlo, sube un archivo nuevo con **el mismo nombre** (`logo.png`, cuadrado, mínimo 512×512 px) y reemplaza el anterior.
 El ícono de la pestaña del navegador está en `app/icon.png` y el de iPhone en `app/apple-icon.png`: reemplázalos igual si cambias el logo.
 
@@ -150,6 +150,17 @@ Arriba del todo de `app/globals.css`:
 Cambia un código y se actualiza en todo el sitio. Las tipografías (Syne para títulos y DM Sans para textos) se cargan en `app/layout.tsx`.
 
 ---
+
+## 4.1 Página "Muy pronto" y lanzamiento
+
+Mientras preparas la tienda, **stampachic.cl** muestra una página con el logo y el mensaje "Estamos trabajando para entregarte pronto los mejores productos", con botones a WhatsApp e Instagram. La tienda completa sigue funcionando en **stampachic.vercel.app** para que la revises (Google no la indexa mientras tanto).
+
+**El día del lanzamiento**, en `config/site.ts` cambia:
+```ts
+comingSoon: {
+  enabled: false,   // antes decía true
+```
+Guarda, y en 1 o 2 minutos stampachic.cl muestra la tienda completa. 🎉
 
 ## 5. Cómo funcionan los pedidos
 

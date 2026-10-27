@@ -67,6 +67,17 @@ export const site = {
     instagramHandle: "@_stampachic",
   },
 
+  /**
+   * Página "Muy pronto".
+   * - enabled: true  → stampachic.cl muestra la página "Estamos trabajando…".
+   *   La tienda completa sigue visible en stampachic.vercel.app para que la revises.
+   * - enabled: false → stampachic.cl muestra la tienda completa (¡lanzamiento! 🎉).
+   */
+  comingSoon: {
+    enabled: true,
+    domains: ["stampachic.cl", "www.stampachic.cl"],
+  },
+
   /** Barra de anuncio superior. Puedes poner uno o varios mensajes. */
   announcement: {
     enabled: true,
